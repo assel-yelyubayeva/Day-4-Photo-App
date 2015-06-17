@@ -16,6 +16,7 @@
 		844404211B312B2E00ED1D9F /* PhotoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844404201B312B2E00ED1D9F /* PhotoAppTests.m */; };
 		8444042C1B312E6500ED1D9F /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444042B1B312E6500ED1D9F /* ImageCollectionViewCell.m */; };
 		8444042E1B313BF200ED1D9F /* lexus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8444042D1B313BF200ED1D9F /* lexus.jpg */; };
+		AB839684438BED1AEFD4B99C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB353F23DB0E687692F60B0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A30C48CAC8D34FA97C58C6C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		844404011B312B2E00ED1D9F /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844404051B312B2E00ED1D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844404061B312B2E00ED1D9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		8444042A1B312E6500ED1D9F /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
 		8444042B1B312E6500ED1D9F /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		8444042D1B313BF200ED1D9F /* lexus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lexus.jpg; sourceTree = "<group>"; };
+		B84BEF4E15A2048182475DDC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FAB353F23DB0E687692F60B0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB839684438BED1AEFD4B99C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +70,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32703809F51840273D40714B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B84BEF4E15A2048182475DDC /* Pods.debug.xcconfig */,
+				2A30C48CAC8D34FA97C58C6C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		36564E2145EDB8008DA0290A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAB353F23DB0E687692F60B0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		844403F81B312B2E00ED1D9F = {
 			isa = PBXGroup;
 			children = (
 				844404031B312B2E00ED1D9F /* PhotoApp */,
 				8444041D1B312B2E00ED1D9F /* PhotoAppTests */,
 				844404021B312B2E00ED1D9F /* Products */,
+				32703809F51840273D40714B /* Pods */,
+				36564E2145EDB8008DA0290A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844404241B312B2E00ED1D9F /* Build configuration list for PBXNativeTarget "PhotoApp" */;
 			buildPhases = (
+				32CAFA2D64A7B9D641782DEA /* Check Pods Manifest.lock */,
 				844403FD1B312B2E00ED1D9F /* Sources */,
 				844403FE1B312B2E00ED1D9F /* Frameworks */,
 				844403FF1B312B2E00ED1D9F /* Resources */,
+				B20CB33B8483221DA37AD094 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +248,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32CAFA2D64A7B9D641782DEA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B20CB33B8483221DA37AD094 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		844403FD1B312B2E00ED1D9F /* Sources */ = {
@@ -355,6 +414,7 @@
 		};
 		844404251B312B2E00ED1D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84BEF4E15A2048182475DDC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PhotoApp/Info.plist;
@@ -365,6 +425,7 @@
 		};
 		844404261B312B2E00ED1D9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A30C48CAC8D34FA97C58C6C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PhotoApp/Info.plist;
@@ -426,6 +487,7 @@
 				844404261B312B2E00ED1D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844404271B312B2E00ED1D9F /* Build configuration list for PBXNativeTarget "PhotoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +496,7 @@
 				844404291B312B2E00ED1D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
