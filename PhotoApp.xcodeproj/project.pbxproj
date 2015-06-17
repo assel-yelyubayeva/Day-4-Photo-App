@@ -14,6 +14,8 @@
 		844404121B312B2E00ED1D9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844404111B312B2E00ED1D9F /* Images.xcassets */; };
 		844404151B312B2E00ED1D9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844404131B312B2E00ED1D9F /* LaunchScreen.xib */; };
 		844404211B312B2E00ED1D9F /* PhotoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844404201B312B2E00ED1D9F /* PhotoAppTests.m */; };
+		8444042C1B312E6500ED1D9F /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444042B1B312E6500ED1D9F /* ImageCollectionViewCell.m */; };
+		8444042E1B313BF200ED1D9F /* lexus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8444042D1B313BF200ED1D9F /* lexus.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		8444041A1B312B2E00ED1D9F /* PhotoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8444041F1B312B2E00ED1D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844404201B312B2E00ED1D9F /* PhotoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoAppTests.m; sourceTree = "<group>"; };
+		8444042A1B312E6500ED1D9F /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		8444042B1B312E6500ED1D9F /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
+		8444042D1B313BF200ED1D9F /* lexus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lexus.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,8 @@
 				844404091B312B2E00ED1D9F /* AppDelegate.m */,
 				8444040B1B312B2E00ED1D9F /* ViewController.h */,
 				8444040C1B312B2E00ED1D9F /* ViewController.m */,
+				8444042A1B312E6500ED1D9F /* ImageCollectionViewCell.h */,
+				8444042B1B312E6500ED1D9F /* ImageCollectionViewCell.m */,
 				8444040E1B312B2E00ED1D9F /* Main.storyboard */,
 				844404111B312B2E00ED1D9F /* Images.xcassets */,
 				844404131B312B2E00ED1D9F /* LaunchScreen.xib */,
@@ -96,6 +103,7 @@
 		844404041B312B2E00ED1D9F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8444042D1B313BF200ED1D9F /* lexus.jpg */,
 				844404051B312B2E00ED1D9F /* Info.plist */,
 				844404061B312B2E00ED1D9F /* main.m */,
 			);
@@ -200,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844404101B312B2E00ED1D9F /* Main.storyboard in Resources */,
+				8444042E1B313BF200ED1D9F /* lexus.jpg in Resources */,
 				844404151B312B2E00ED1D9F /* LaunchScreen.xib in Resources */,
 				844404121B312B2E00ED1D9F /* Images.xcassets in Resources */,
 			);
@@ -221,6 +230,7 @@
 			files = (
 				8444040D1B312B2E00ED1D9F /* ViewController.m in Sources */,
 				8444040A1B312B2E00ED1D9F /* AppDelegate.m in Sources */,
+				8444042C1B312E6500ED1D9F /* ImageCollectionViewCell.m in Sources */,
 				844404071B312B2E00ED1D9F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
