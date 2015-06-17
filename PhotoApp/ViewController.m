@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ImageCollectionViewCell.h"
 #import <SimpleAuth/SimpleAuth.h>
+#import "DetailViewController.h"
 
 @interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -41,7 +42,7 @@
 }
 -(void) downloadImages{
     NSURLSession *session =[NSURLSession sharedSession];
-    NSString *urlString =[[NSString alloc] initWithFormat:@"https://api.instagram.com/v1/tags/cars/media/recent?access_token=%@", self.accessToken];
+    NSString *urlString =[[NSString alloc] initWithFormat:@"https://api.instagram.com/v1/tags/cats/media/recent?access_token=%@", self.accessToken];
 //    NSLog(@"%@",urlString);
     
     NSURL *url = [[NSURL alloc] initWithString:urlString];
@@ -73,10 +74,18 @@
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    NSDictionary *photo = self.photos[indexPath.row];
+    NSDictionary *photo = self.photos[indexPath.item];
     cell.photo=photo;
     return cell;
 }
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *photo = self.photos[indexPath.item];
+    NSLog(@"%d", (int)indexPath.item);
+    DetailViewController *vc =[DetailViewController new];
+    vc.modalPresentationStyle=UIModalPresentationCurrentContext;
+    vc.photo=photo;
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 @end
