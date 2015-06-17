@@ -14,8 +14,9 @@
 		844404121B312B2E00ED1D9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844404111B312B2E00ED1D9F /* Images.xcassets */; };
 		844404151B312B2E00ED1D9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844404131B312B2E00ED1D9F /* LaunchScreen.xib */; };
 		844404211B312B2E00ED1D9F /* PhotoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844404201B312B2E00ED1D9F /* PhotoAppTests.m */; };
-		8444042C1B312E6500ED1D9F /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444042B1B312E6500ED1D9F /* ImageCollectionViewCell.m */; };
 		8444042E1B313BF200ED1D9F /* lexus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8444042D1B313BF200ED1D9F /* lexus.jpg */; };
+		844404321B316C1A00ED1D9F /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844404311B316C1A00ED1D9F /* PhotoController.m */; };
+		844404341B316F1200ED1D9F /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844404331B316F1200ED1D9F /* ImageCollectionViewCell.m */; };
 		AB839684438BED1AEFD4B99C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB353F23DB0E687692F60B0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +46,10 @@
 		8444041F1B312B2E00ED1D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844404201B312B2E00ED1D9F /* PhotoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoAppTests.m; sourceTree = "<group>"; };
 		8444042A1B312E6500ED1D9F /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
-		8444042B1B312E6500ED1D9F /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		8444042D1B313BF200ED1D9F /* lexus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lexus.jpg; sourceTree = "<group>"; };
+		844404301B316C1A00ED1D9F /* PhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoController.h; sourceTree = "<group>"; };
+		844404311B316C1A00ED1D9F /* PhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoController.m; sourceTree = "<group>"; };
+		844404331B316F1200ED1D9F /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		B84BEF4E15A2048182475DDC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FAB353F23DB0E687692F60B0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,8 +117,10 @@
 				844404091B312B2E00ED1D9F /* AppDelegate.m */,
 				8444040B1B312B2E00ED1D9F /* ViewController.h */,
 				8444040C1B312B2E00ED1D9F /* ViewController.m */,
+				844404301B316C1A00ED1D9F /* PhotoController.h */,
+				844404311B316C1A00ED1D9F /* PhotoController.m */,
 				8444042A1B312E6500ED1D9F /* ImageCollectionViewCell.h */,
-				8444042B1B312E6500ED1D9F /* ImageCollectionViewCell.m */,
+				844404331B316F1200ED1D9F /* ImageCollectionViewCell.m */,
 				8444040E1B312B2E00ED1D9F /* Main.storyboard */,
 				844404111B312B2E00ED1D9F /* Images.xcassets */,
 				844404131B312B2E00ED1D9F /* LaunchScreen.xib */,
@@ -289,8 +294,9 @@
 			files = (
 				8444040D1B312B2E00ED1D9F /* ViewController.m in Sources */,
 				8444040A1B312B2E00ED1D9F /* AppDelegate.m in Sources */,
-				8444042C1B312E6500ED1D9F /* ImageCollectionViewCell.m in Sources */,
+				844404341B316F1200ED1D9F /* ImageCollectionViewCell.m in Sources */,
 				844404071B312B2E00ED1D9F /* main.m in Sources */,
+				844404321B316C1A00ED1D9F /* PhotoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
