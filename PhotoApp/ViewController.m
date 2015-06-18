@@ -10,8 +10,10 @@
 #import "ImageCollectionViewCell.h"
 #import <SimpleAuth/SimpleAuth.h>
 #import "DetailViewController.h"
+#import "PresentDetailTransition.h"
+#import "dismissDetailTransition.h"
 
-@interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) NSString *accessToken;
 @property (strong, nonatomic) NSMutableArray *photos;
@@ -81,11 +83,19 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *photo = self.photos[indexPath.item];
-    NSLog(@"%d", (int)indexPath.item);
+  //  NSLog(@"%d", (int)indexPath.item);
     DetailViewController *vc =[DetailViewController new];
-    vc.modalPresentationStyle=UIModalPresentationCurrentContext;
+    vc.modalPresentationStyle=UIModalPresentationCustom;
     vc.photo=photo;
+    vc.transitioningDelegate=self;
     [self presentViewController:vc animated:YES completion:nil];
 }
-
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return [PresentDetailTransition new];
+}
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [dismissDetailTransition new];
+}
 @end
